@@ -1,4 +1,4 @@
-let aqi = 221;
+let aqi = 270;
 const aqiValue = document.getElementById("aqiValue");
 
 setInterval(() => {
