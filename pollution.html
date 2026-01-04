@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AQI Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="file.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="logo">A<span>Qi</span></div>
+
+    <div class="search">
+      🔍
+      <input type="text" placeholder="Search any Location, City, State or Country">
+    </div>
+
+    <div class="nav-right">
+      <div class="chip">AQI-Delhi</div>
+      <div class="chip">English-IN</div>
+      <button class="btn">Login</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="container">
+    <div class="breadcrumb">Dashboard › India › Delhi › New Delhi</div>
+
+    <div class="tabs">
+      <div class="tab active">AQI</div>
+      <div class="tab">Weather</div>
+    </div>
+
+    <h1>New Delhi Air Quality Index (AQI)</h1>
+    <p class="subtext">Real-time PM2.5 & PM10 air pollution</p>
+
+    <section class="hero">
+
+<!--water pollution-->
+        <div class="water-card">
+  <video autoplay muted loop playsinline class="water-video">
+    <source src="water.mp4" type="video/mp4">
+  </video>
+
+  <div class="water-overlay">
+    <h3>Water Quality</h3>
+    <div class="tds-value">
+      <span id="tdsValue">680</span>
+      <small>ppm</small>
+    </div>
+    <div id="tdsStatus" class="tds-status">Poor</div>
+  </div>
+</div>
+
+
+      <!-- AQI CARD -->
+      <div class="card">
+        <div class="live">
+          <span class="dot"></span> LIVE AQI
+        </div>
+
+        <div class="aqi">
+          <div class="value" id="aqiValue">221</div>
+          <div>
+            <div class="status">Severe</div>
+            <div class="label">AQI (Delhi)</div>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div>PM10: <b>199 µg/m³</b></div>
+          <div>PM2.5: <b>145 µg/m³</b></div>
+        </div>
+
+        <div class="scale">
+          <div class="bar"></div>
+          <small>
+            <span>0</span><span>50</span><span>100</span>
+            <span>150</span><span>200</span><span>300+</span>
+          </small>
+        </div>
+      </div>
+
+      <!-- WEATHER + MAP -->
+      <div>
+
+        <!-- MAP -->
+        <div class="map">
+          <!-- VIDEO OPTION -->
+          <video autoplay muted loop playsinline>
+            <source src="map.mp4" type="video/mp4">
+          </video>
+
+          <!-- IMAGE OPTION (use instead of video) -->
+          <!-- <img src="map.jpg" alt="AQI Map"> -->
+
+          <div class="map-label">AQI Map · New Delhi</div>
+        </div>
+        <div class="weather">
+          <div class="temp">12°C · Mist</div>
+          <div class="wx-row">
+            <div class="wx">Humidity<br><b>77%</b></div>
+            <div class="wx">Wind<br><b>7 km/h</b></div>
+            <div class="wx">UV Index<br><b>3</b></div>
+          </div>
+        </div> 
+        
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
