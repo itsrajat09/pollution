@@ -1,0 +1,31 @@
+let aqi = 421;
+const aqiValue = document.getElementById("aqiValue");
+
+setInterval(() => {
+  aqi += Math.random() > 0.5 ? 1 : -1;
+  aqiValue.textContent = aqi;
+}, 3000);
+
+
+let tds = 680;
+
+const tdsValue = document.getElementById("tdsValue");
+const tdsStatus = document.getElementById("tdsStatus");
+
+setInterval(() => {
+  const change = Math.floor(Math.random() * 20) - 10;
+  tds += change;
+
+  // realistic TDS range
+  tds = Math.max(50, Math.min(2000, tds));
+
+  tdsValue.textContent = tds;
+
+  let status = "Unfit";
+  if (tds <= 300) status = "Excellent";
+  else if (tds <= 600) status = "Good";
+  else if (tds <= 900) status = "Poor";
+
+  tdsStatus.textContent = status;
+
+}, 4000);
