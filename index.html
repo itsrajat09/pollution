@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>AQI Dashboard</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="pollution.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -39,32 +40,39 @@
 
   <section class="hero">
 
+    <!-- WATER CARD -->
     <div class="water-card">
-      <video class="water-video" autoplay muted loop playsinline>
-        <source src="water.mp4" type="video/mp4">
-      </video>
       <div class="water-overlay">
         <h3>Water Quality</h3>
-        <div class="tds-value" id="tdsValue">680 <small>ppm</small></div>
+        <div class="tds-value">
+          <span id="tdsValue">680</span> <small>ppm</small>
+        </div>
         <div class="tds-status" id="tdsStatus">Poor</div>
       </div>
     </div>
 
+    <!-- AQI CARD -->
     <div class="card">
       <div class="live"><span class="dot"></span> LIVE AQI</div>
       <div class="aqi">
-        <div class="value" id="aqiValue">221</div>
+        <div class="value" id="aqiValue">421</div>
         <div>
           <div class="status">Severe</div>
           <div class="label">AQI (Delhi)</div>
         </div>
       </div>
+
       <div class="metrics">
         <div>PM10: <b>199 µg/m³</b></div>
         <div>PM2.5: <b>145 µg/m³</b></div>
       </div>
+
       <div class="scale">
         <div class="bar"></div>
+        <small>
+          <span>0</span><span>50</span><span>100</span>
+          <span>150</span><span>200</span><span>300+</span>
+        </small>
       </div>
     </div>
 
